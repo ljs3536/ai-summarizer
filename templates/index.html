@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AI 요약기</title>
+</head>
+<body>
+<h1>텍스트 요약</h1>
+<form method="POST" action="/summary">
+    <textarea name="input_text" rows="10" cols="80" placeholder="요약할 텍스트를 입력하세요"></textarea><br>
+    <button type="submit">요약하기</button>
+</form>
+{% if summary %}
+<h2>요약 결과:</h2>
+<p>{{ summary }}</p>
+{% endif %}
+</body>
+</html>
