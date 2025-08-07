@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>손글씨 숫자 인식기</title>
+</head>
+<body>
+<h1>숫자 이미지 업로드</h1>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required><br><br>
+    <button type="submit">예측하기</button>
+</form>
+
+{% if prediction is not none %}
+<h2>예측 결과: {{ prediction }}</h2>
+{% endif %}
+</body>
+</html>
